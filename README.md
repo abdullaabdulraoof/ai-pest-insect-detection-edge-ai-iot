@@ -16,15 +16,7 @@ This project demonstrates real-world integration of:
 
 ### Raspberry Pi System Setup
 
-![Hardware Setup](images/hardware_setup.jpg)
-
-### Relay Control Module
-
-![Relay Module](images/relay_module.jpg)
-
-### Full Working Prototype
-
-![Prototype](images/prototype.jpg)
+![Hardware Setup](images/hardware.jpeg)
 
 ---
 
