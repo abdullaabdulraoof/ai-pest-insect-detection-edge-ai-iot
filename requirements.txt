@@ -1,0 +1,6 @@
+ultralytics
+opencv-python
+numpy
+RPi.GPIO
+smbus2
+apds9960
