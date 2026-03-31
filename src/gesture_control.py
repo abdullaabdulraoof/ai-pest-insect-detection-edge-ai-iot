@@ -1,11 +1,14 @@
-import RPi.GPIO as GPIO
-from config import BUZZER_PIN
+import smbus
+from apds9960 import APDS9960
+from apds9960.const import *
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(BUZZER_PIN, GPIO.OUT)
+bus = smbus.SMBus(1)
+apds = APDS9960(bus)
 
-def buzzer_on():
-    GPIO.output(BUZZER_PIN, GPIO.HIGH)
+apds.enableGestureSensor()
 
-def buzzer_off():
-    GPIO.output(BUZZER_PIN, GPIO.LOW)
+def read_gesture():
+    if apds.isGestureAvailable():
+        motion = apds.readGesture()
+        return motion
+    return None
